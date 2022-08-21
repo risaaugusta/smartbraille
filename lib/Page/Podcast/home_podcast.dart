@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartbraille/Page/Dashboard.dart';
-import 'package:smartbraille/Page/Podcast/detail_podcast.dart';
+import 'package:smartbraille/Page/Podcast/detail_podcast_pkn.dart';
+import 'package:smartbraille/Page/Podcast/detail_podcast_bindo.dart';
 
 // ignore: camel_case_types
 class homePodcast extends StatelessWidget {
@@ -104,7 +105,12 @@ class homePodcast extends StatelessWidget {
                   image: AssetImage('assets/images/podcast.png'),
                   fit: BoxFit.cover,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => detailPodcastBindo()),
+                      );
+                    },
                   ),
                 ),
                 Padding(

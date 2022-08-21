@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartbraille/Page/Podcast/detail_podcast.dart';
+import 'package:smartbraille/Page/Podcast/detail_podcast_pkn.dart';
 import 'package:smartbraille/Page/Podcast/home_podcast.dart';
 import 'package:smartbraille/Page/chatting/detail_chatting.dart';
 import 'package:smartbraille/Page/chatting/home_catting.dart';

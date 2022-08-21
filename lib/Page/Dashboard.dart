@@ -102,7 +102,8 @@ class myDashboard extends StatelessWidget {
           onPressed: () {},
           backgroundColor: Color(0xFF07617D),
           icon: Icon(
-            Icons.cell_tower_sharp,
+            // Icons.cell_tower_sharp,
+            Icons.account_circle,
             size: 40,
           ),
           label: Text('LIVE'),

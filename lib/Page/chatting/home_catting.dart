@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartbraille/Page/Dashboard.dart';
-import 'package:smartbraille/Page/Podcast/detail_podcast.dart';
+import 'package:smartbraille/Page/Podcast/detail_podcast_pkn.dart';
 import 'package:smartbraille/Page/chatting/detail_chatting.dart';
 
 // ignore: camel_case_types

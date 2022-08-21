@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:smartbraille/Page/Dashboard.dart';
+import 'package:smartbraille/Page/Podcast/bindo/bagian1.dart';
 import 'package:smartbraille/Page/Podcast/home_podcast.dart';
+import 'package:smartbraille/Page/Podcast/pemutaran.dart';
+import 'package:smartbraille/Page/Podcast/pkn/bagian1.dart';
+import 'package:smartbraille/Page/Podcast/pkn/bagian2.dart';
 
 // ignore: camel_case_types
-class detailPodcast extends StatelessWidget {
-  const detailPodcast({Key? key}) : super(key: key);
+class detailPodcastBindo extends StatelessWidget {
+  const detailPodcastBindo({Key? key}) : super(key: key);
   static const nameRoute = '/detailPodcast'; //optional
 
   @override
@@ -37,7 +41,7 @@ class detailPodcast extends StatelessWidget {
           title: Column(
             children: [
               SizedBox(height: 30),
-              Text("Pendidikan Kewarganegaraan",
+              Text("Bahasa Indonesia",
                   style: TextStyle(color: Colors.black)),
             ],
           ),
@@ -61,16 +65,37 @@ class detailPodcast extends StatelessWidget {
                       itemCount: 10,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) => Container(
-                            height: 100,
-                            width: 300,
-                            margin: EdgeInsets.fromLTRB(20, 30, 20, 30),
-                            child: Center(
-                              child: Text(
-                                ("Bagian $index"),
-                              ),
+                        height: 100,
+                        width: 300,
+                        margin: EdgeInsets.fromLTRB(20, 30, 20, 30),
+                        child: Center(
+                          child: InkWell(
+                            onTap: () {
+                              if(index == 0){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => BindoBagian1()),
+                                );
+                              }else if(index == 1){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => BindoBagian1()),
+                                );
+                              }else if(index == 2){
+                                // Navigator.push(
+                                // context,
+                                // MaterialPageRoute(builder: (context) => Bagian2()),
+                                // );
+                                null; ///dst
+                              }
+                            },
+                            child: Text(
+                              ("Bagian ${index+1}"),
                             ),
-                            color: Theme.of(context).colorScheme.primary,
-                          )),
+                          ),
+                        ),
+                        color: Theme.of(context).colorScheme.primary,
+                      )),
                 )
               ],
             ),
