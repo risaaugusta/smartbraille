@@ -135,7 +135,7 @@ class _BindoBagian1State extends State<BindoBagian1> {
               //   },
               // ),
               Container(
-                height: MediaQuery.of(context).size.height/3,
+                height: MediaQuery.of(context).size.height/3, //100
                 color: Theme.of(context).colorScheme.primary,
                 padding: EdgeInsets.only(top: 50),
                 child: Center(

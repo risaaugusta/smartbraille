@@ -139,9 +139,18 @@ class _Bagian1State extends State<Bagian1> {
                 color: Theme.of(context).colorScheme.primary,
                 padding: EdgeInsets.only(top: 50),
                 child: Center(
-                  child: Column(
-                    children: [
-                      IconButton(
+                    child: FloatingActionButton.extended(
+                      heroTag: "btn4",
+                      onPressed: () async {
+                        if (isPlaying){
+                          await audioPlayer.pause();
+                        }else{
+                          String url = 'assets/audio/alfatihah.mp3';
+                          await audioPlayer.play(url);
+                        }
+                      },
+                      backgroundColor: Theme.of(context).colorScheme.primary,
+                      icon: IconButton(
                         iconSize: 70,
                         icon: Icon( isPlaying ? Icons.pause :
                         Icons.play_circle_fill,
@@ -156,10 +165,28 @@ class _Bagian1State extends State<Bagian1> {
                           }
                         },
                       ),
-                    ],
-                  ),
+                      label: isPlaying ?
+                      Text(
+                          ("Berhenti"),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold
+                          )
+                      ) : Text(
+                          ("Putar"),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold
+                          )
+                      ),
+                    )
                 ),
-              )
+              ),
+
             ],
           ),
         ),
